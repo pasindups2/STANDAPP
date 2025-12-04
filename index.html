@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="si">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STANDAPP - මානසික සුවතා සහකරු</title>
+    <!-- Jost Font (Similar to Glacial Indifference) and Noto Sans Sinhala -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Noto+Sans+Sinhala:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: 'var(--brand-50)',
+                100: 'var(--brand-100)',
+                200: 'var(--brand-200)',
+                300: 'var(--brand-300)',
+                400: 'var(--brand-400)',
+                500: 'var(--brand-500)',
+                600: 'var(--brand-600)',
+                700: 'var(--brand-700)',
+                800: 'var(--brand-800)',
+                900: 'var(--brand-900)',
+              },
+              neutral: {
+                50: 'var(--neutral-50)',
+                100: 'var(--neutral-100)',
+                200: 'var(--neutral-200)',
+                300: 'var(--neutral-300)',
+                400: 'var(--neutral-400)',
+                500: 'var(--neutral-500)',
+                600: 'var(--neutral-600)',
+                700: 'var(--neutral-700)',
+                800: 'var(--neutral-800)',
+                900: 'var(--neutral-900)',
+              },
+              accent: {
+                50: 'var(--accent-50)',
+                100: 'var(--accent-100)',
+                400: 'var(--accent-400)',
+                500: 'var(--accent-500)',
+                600: 'var(--accent-600)',
+              }
+            },
+            fontFamily: {
+              sans: ['Jost', 'sans-serif'], 
+              sinhala: ['Noto Sans Sinhala', 'sans-serif'],
+            },
+            animation: {
+              'breathe': 'breathe 8s infinite ease-in-out',
+              'fade-in': 'fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+              'slide-up': 'slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'float': 'float 6s ease-in-out infinite',
+              'aurora': 'aurora 20s infinite linear',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'pop': 'pop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+            },
+            keyframes: {
+              breathe: {
+                '0%, 100%': { transform: 'scale(1)', opacity: '0.9' },
+                '50%': { transform: 'scale(1.3)', opacity: '0.6' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px) scale(0.95)' },
+                '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
+              },
+              pop: {
+                '0%': { transform: 'scale(0.8)', opacity: '0' },
+                '100%': { transform: 'scale(1)', opacity: '1' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              aurora: {
+                '0%': { backgroundPosition: '0% 50%' },
+                '50%': { backgroundPosition: '100% 50%' },
+                '100%': { backgroundPosition: '0% 50%' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      /* --- COLORFUL THEME (DEFAULT) --- */
+      :root {
+        /* Indigo / Violet Brand */
+        --brand-50: #eef2ff;
+        --brand-100: #e0e7ff;
+        --brand-200: #c7d2fe;
+        --brand-300: #a5b4fc;
+        --brand-400: #818cf8;
+        --brand-500: #6366f1;
+        --brand-600: #4f46e5;
+        --brand-700: #4338ca;
+        --brand-800: #3730a3;
+        --brand-900: #312e81;
+
+        /* Slate Neutral */
+        --neutral-50: #f8fafc;
+        --neutral-100: #f1f5f9;
+        --neutral-200: #e2e8f0;
+        --neutral-300: #cbd5e1;
+        --neutral-400: #94a3b8;
+        --neutral-500: #64748b;
+        --neutral-600: #475569;
+        --neutral-700: #334155;
+        --neutral-800: #1e293b;
+        --neutral-900: #0f172a;
+
+        /* Rose Accent */
+        --accent-50: #fff1f2;
+        --accent-100: #ffe4e6;
+        --accent-400: #fb7185;
+        --accent-500: #f43f5e;
+        --accent-600: #e11d48;
+      }
+
+      /* --- PREMIUM MIDNIGHT DARK THEME --- */
+      .theme-dark {
+        /* Premium Midnight Blue / Electric Violet / Cyber Cyan */
+        
+        /* Backgrounds - Richer, deeper blues */
+        --brand-50: #02040a;  /* Void Black */
+        --brand-100: #0b101b; /* Deep Navy */
+        --brand-200: #151b2e; /* Card BG */
+        
+        /* Interactive Elements */
+        --brand-300: #3730a3; 
+        --brand-400: #4f46e5;
+        --brand-500: #6366f1; /* Primary Neon */
+        --brand-600: #818cf8; /* Glow */
+        
+        /* Highlighting */
+        --brand-700: #a5b4fc; 
+        --brand-800: #c7d2fe; 
+        --brand-900: #ffffff; 
+
+        /* Neutrals */
+        --neutral-50: #000000;
+        --neutral-100: #0b101b;
+        --neutral-200: #1e293b;
+        --neutral-300: #334155; 
+        --neutral-400: #94a3b8; 
+        --neutral-500: #cbd5e1;
+        --neutral-600: #e2e8f0;
+        --neutral-700: #f1f5f9; 
+        --neutral-800: #f8fafc; 
+        --neutral-900: #ffffff; 
+
+        /* Neon Accents */
+        --accent-50: #2d0612;
+        --accent-100: #831843;
+        --accent-400: #ec4899; /* Neon Pink */
+        --accent-500: #f472b6; 
+        --accent-600: #2dd4bf; /* Teal */
+      }
+
+      body {
+        font-family: 'Noto Sans Sinhala', 'Jost', sans-serif;
+        background-color: var(--neutral-50);
+        color: var(--neutral-800);
+        transition: background-color 0.5s ease, color 0.3s ease;
+      }
+
+      /* High-End Glassmorphism Utilities */
+      .glass {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      
+      .theme-dark .glass {
+        background: rgba(11, 16, 27, 0.6);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Message Bubbles */
+      .bubble-user {
+        background: linear-gradient(135deg, var(--brand-600), var(--brand-500));
+        box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      
+      .bubble-ai {
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .theme-dark .bubble-ai {
+        background: rgba(30, 41, 59, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        color: #fff;
+      }
+
+      /* Input Glow */
+      .input-glow:focus-within {
+        box-shadow: 0 0 0 2px var(--brand-200), 0 0 20px rgba(99, 102, 241, 0.2);
+      }
+      .theme-dark .input-glow:focus-within {
+        box-shadow: 0 0 0 2px var(--brand-600), 0 0 25px rgba(99, 102, 241, 0.4);
+      }
+
+      /* Custom scrollbar */
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
